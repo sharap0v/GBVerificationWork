@@ -6,7 +6,7 @@
 .idea
 # Blue
 *.ctxt
-
+GBVerificationWork.iml
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 

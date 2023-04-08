@@ -1,6 +1,21 @@
 public class Main {
     public static void main(String[] args) {
         printStringArray(args);
+        printStringArray(searchForStringsInArrayWhoseLengthIsGreaterThanOrEqualToThree(args));
+    }
+
+    public static void printStringArray(String[] array){
+        System.out.print("[");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if(i!= array.length-1){
+                System.out.print(", ");
+            }
+        }
+        System.out.print("]\r\n");
+    }
+
+    public static String[] searchForStringsInArrayWhoseLengthIsGreaterThanOrEqualToThree(String[] args){
         String [] result = new String[0];
         for (int i = 0; i < args.length; i++) {
             if (args[i].length()<=3) {
@@ -14,16 +29,6 @@ public class Main {
                 result = array;
             }
         }
-        printStringArray(result);
-    }
-    public static void printStringArray(String[] array){
-        System.out.print("[");
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i]);
-            if(i!= array.length-1){
-                System.out.print(", ");
-            }
-        }
-        System.out.print("]\r\n");
+        return result;
     }
 }
